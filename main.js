@@ -73,16 +73,28 @@ function getTemplate(arr){
     data.sort(() => Math.random() - 0.5);
     for(let j=0; j<data.length; j++){
         result += `
-          <div class="card" data-content-pictures="${data[j].id}">
-           <div class="card_front"  width="50%" color="aqua">
-              <img class="pictures" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/NC_150.svg/900px-NC_150.svg.png" width="50%">
-           </div>
-            <div class="card_back" width="50%">
-              <img class="pictures" src="${data[j].img}" width="50%">
-            </div>
-          </div>`;
+            <div class="memory_card">
+              <img class="pictures" data-id="${data[j].id}" src="${data[j].img} ">
+            </div>`;
     }
     return result;
 }
-//debugger;
+
 mainEl.innerHTML = getTemplate(cards);
+
+mainEl.onclick = (event) => {
+    let memoryCard = event.target;
+    while (!memoryCard.getAttribute('class').includes('memory_card')){
+        memoryCard = memoryCard.parentElement;
+    }
+
+    if (memoryCard.classList.contains('first')){
+        memoryCard.classList.remove("first");
+    } else {
+        memoryCard.classList.add("first");
+    }
+
+    console.log(memoryCard)
+    // console.log(event.target.getAttribute('data-id'))
+}
+

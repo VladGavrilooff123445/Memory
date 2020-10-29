@@ -5,13 +5,39 @@
     flex-direction: row;
 }
 
-.memory_card{
+section{
+    width: 1034px;
+    margin: auto;
+}
+.memory_card_wrapper{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 100%;
     flex-wrap: wrap;
 }
+
+.memory_card{
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.memory_card:hover {
+    transition: 0.6s;
+    transform: rotateY(180deg);
+}
+
+.test {
+   width: 150px;
+}
+
+.first {
+    border: 1px solid red;
+}
+
+.memory_card > img{
+    width: 150px;
+}
+
 .card-front {
     color: aqua;
     width: 50%;
