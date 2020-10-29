@@ -1,1 +1,1 @@
-[run](https://github.io/VladGavrilooff123445/Memory)
+[run](https://VladGavrilooff123445.github.io/Memory)
