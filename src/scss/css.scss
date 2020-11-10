@@ -13,18 +13,10 @@ section{
 .memory_card{
     margin: 10px;
     border: 1px solid white;
-    //&:hover {
-    //    transition: 0.6s;
-    //    transform: rotateY(180deg);
-    //
-    //}
-    pictures1 {
-        display: block;
-        &:hover{
-            transition: 0.6s;
-            transform: rotateY(180deg);
-            display: none;
-        }
+    &:hover {
+        transition: 0.6s;
+        transform: rotateY(180deg);
+
     }
     &_wrapper{
         display: flex;
