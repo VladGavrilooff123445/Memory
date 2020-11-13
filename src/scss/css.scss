@@ -13,19 +13,37 @@ section{
 .memory_card{
     margin: 10px;
     border: 1px solid white;
-    &:hover {
-        transition: 0.6s;
-        transform: rotateY(180deg);
 
-    }
-    &_wrapper{
+    &_wrapper {
         display: flex;
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-    }
-    img{
-        width: 150px;
+
+        .first {
+            border: 1px solid red;
+            transition: 0.6s;
+            transform: rotateY(180deg);
+
+            .pictures {
+                display: block;
+            }
+
+            .pictures2 {
+                display: none;
+            }
+        }
+
+        .pictures {
+            display: none;
+        }
+
+        .pictures2 {
+            display: block;
+        }
+        img {
+            width: 150px;
+        }
     }
 }
 
@@ -35,9 +53,7 @@ section{
 }
 
 
-.first {
-    border: 1px solid red;
-}
+
 
 .card {
     transition: 0.6s;
